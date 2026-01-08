@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MJ Tyre Showroom</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO -->
+<meta name="description" content="MJ Tyre Showroom is a trusted tyre dealer with 30 years of experience, offering car, bike, heavy, agricultural and industrial tyres from top brands.">
+<meta name="keywords" content="MJ Tyre Showroom, tyre shop near me, car tyres, bike tyres, heavy tyres, agricultural tyres, industrial tyres">
+<meta name="author" content="MJ Tyre Showroom">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#0f172a;
+    --accent:#c9a24d;
+    --light:#f8fafc;
+    --dark:#020617;
+    --green:#25d366;
+}
+*{box-sizing:border-box;}
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background:#fff;
+    color:#1e293b;
+}
+
+/* ================= HEADER FIX ================= */
+header{
+    background:var(--dark);
+    padding:14px 20px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    position:sticky;
+    top:0;
+    z-index:100;
+    box-shadow:0 10px 30px rgba(0,0,0,.45);
+}
+
+header h1{
+    margin:0;
+    color:var(--accent);
+    font-weight:700;
+    font-size:22px;
+    white-space:nowrap;
+}
+
+nav{
+    display:flex;
+    gap:18px;
+    overflow-x:auto;
+    white-space:nowrap;
+    scrollbar-width:none;
+}
+nav::-webkit-scrollbar{display:none;}
+
+nav a{
+    text-decoration:none;
+    color:#e5e7eb;
+    font-weight:500;
+    flex-shrink:0;
+}
+nav a:hover{color:var(--accent);}
+
+/* ================= HERO ================= */
+.hero{
+    height:80vh;
+    background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),url("header.jpeg") center/cover;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+.hero h2{font-size:50px;}
+.hero p{font-size:18px;}
+.hero a{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 34px;
+    background:var(--accent);
+    color:#000;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:600;
+}
+
+/* ================= SECTIONS ================= */
+section{padding:80px 30px;}
+.section-title{text-align:center;margin-bottom:45px;}
+.section-title h2{font-size:36px;}
+.section-title p{color:#64748b;}
+
+/* ================= GALLERY ================= */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+.tyre-card{
+    border-radius:16px;
+    overflow:hidden;
+    background:#fff;
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+.tyre-card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+.tyre-info{
+    padding:20px;
+    text-align:center;
+}
+.tyre-info a{
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 22px;
+    background:var(--green);
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+}
+
+/* ================= BRANDS ================= */
+.brands{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    max-width:1100px;
+    margin:auto;
+}
+.brand{
+    background:#fff;
+    padding:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    border-radius:14px;
+}
+.brand img{
+    max-width:120px;
+    max-height:60px;
+    object-fit:contain;
+}
+
+/* ================= JOURNEY ================= */
+.journey-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    max-width:1100px;
+    margin:auto;
+}
+.journey-card{
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+    border-radius:16px;
+    overflow:hidden;
+    text-align:center;
+    background:#fff;
+}
+.journey-card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+.journey-info{padding:22px;}
+.journey-year{
+    background:var(--accent);
+    color:#000;
+    padding:6px 16px;
+    border-radius:20px;
+    font-size:13px;
+    display:inline-block;
+    margin-bottom:10px;
+}
+
+/* ================= FOUNDER ================= */
+.founder{
+    background:var(--primary);
+    text-align:center;
+    color:#fff;
+}
+.founder img{
+    width:180px;
+    border-radius:50%;
+    margin-bottom:15px;
+    border:4px solid var(--accent);
+}
+.founder h3{color:var(--accent);}
+
+/* ================= MAP ================= */
+iframe{
+    width:100%;
+    height:360px;
+    border:0;
+}
+
+/* ================= FOOTER ================= */
+footer{
+    background:var(--dark);
+    color:#cbd5f5;
+    text-align:center;
+    padding:22px;
+}
+
+/* ================= WHATSAPP ================= */
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:var(--green);
+    color:#fff;
+    font-size:28px;
+    padding:15px;
+    border-radius:50%;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+    .brands{grid-template-columns:repeat(3,1fr);}
+}
+@media(max-width:768px){
+    section{padding:45px 18px;}
+    .hero{height:auto;padding:80px 20px;}
+    .hero h2{font-size:32px;}
+}
+@media(max-width:500px){
+    .brands{grid-template-columns:repeat(2,1fr);}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>MJ Tyre Showroom</h1>
+    <nav>
+        <a href="#Heavy">Heavy tyres</a>
+        <a href="#Car">Car tyres</a>
+        <a href="#Bike">Bike tyres</a>
+        <a href="#brands">Brands</a>
+        <a href="#contact">Visit</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h2>Strong Tyres. Strong Roads.</h2>
+        <p>Explore Our Tyre Collection</p>
+        <a href="https://wa.me/916281656958">WhatsApp Enquiry</a>
+    </div>
+</section>
+
+<!-- Heavy Tyres -->
+<section id="Heavy">
+    <div class="section-title">
+        <h2>Heavy Tyres</h2>
+        <p>Heavy-duty tyres for agricultural & industrial performance</p>
+    </div>
+    <div class="gallery">
+        <div class="tyre-card">
+            <img src="https://www.bkt-tires.com/media/immagini/10233_n_CARD_INDUSTRY_Agri_A.jpg">
+            <div class="tyre-info">
+                <h3>Agricultural Tyres</h3>
+                <a href="#">Enquire</a>
+            </div>
+        </div>
+        <div class="tyre-card">
+            <img src="https://www.bkt-tires.com/media/immagini/10234_n_CARD_INDUSTRY_Ind_A.jpg">
+            <div class="tyre-info">
+                <h3>Industrial Tyres</h3>
+                <a href="#">Enquire</a>
+            </div>
+        </div>
+        <div class="tyre-card">
+            <img src="https://www.bkt-tires.com/media/immagini/10235_n_CARD_INDUSTRY_OTR_A.jpg">
+            <div class="tyre-info">
+                <h3>Heavy Grip Tyres</h3>
+                <a href="#">Enquire</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Car Tyres -->
+<section id="Car" style="background:var(--light);">
+    <div class="section-title">
+        <h2>Car Tyres</h2>
+        <p>Comfort, safety & performance</p>
+    </div>
+    <div class="gallery">
+        <div class="tyre-card">
+            <img src="https://static.wixstatic.com/media/240fef_4539c1cf3e13422287043fa4fe881e61~mv2.png">
+            <div class="tyre-info">
+                <h3>Premium Car Tyre</h3>
+                <a href="#">Enquire</a>
+            </div>
+        </div>
+        <div class="tyre-card">
+            <img src="https://static.wixstatic.com/media/240fef_c9cde05cbf3d4eaa9edeeb925c9ac09e~mv2.png">
+            <div class="tyre-info">
+                <h3>All-Season Tyre</h3>
+                <a href="#">Enquire</a>
+            </div>
+        </div>
+        <div class="tyre-card">
+            <img src="https://static.wixstatic.com/media/240fef_f4c1ca4e32e342e6894edfd48d0bf0ea~mv2.png">
+            <div class="tyre-info">
+                <h3>Radial Tyre</h3>
+                <a href="#">Enquire</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bike Tyres -->
+<section id="Bike">
+    <div class="section-title">
+        <h2>Two & Three Wheeler Tyres</h2>
+        <p>Grip, mileage & control</p>
+    </div>
+    <div class="gallery">
+        <div class="tyre-card">
+            <img src="https://www.apollotyres.com/content/dam/orbit/syncforce/products/1892/T0016908.png">
+            <div class="tyre-info">
+                <h3>Bike Tyre</h3>
+                <a href="#">Enquire</a>
+            </div>
+        </div>
+        <div class="tyre-card">
+            <img src="https://www.apollotyres.com/content/dam/orbit/syncforce/products/2102/T0016921.png">
+            <div class="tyre-info">
+                <h3>Three Wheeler Tyre</h3>
+                <a href="#">Enquire</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Journey -->
+<section>
+    <div class="section-title">
+        <h2>Our 30 Years Journey</h2>
+        <p>Started small, grown with trust</p>
+    </div>
+    <div class="journey-grid">
+        <div class="journey-card">
+            <img src="showroom-1.jpg">
+            <div class="journey-info">
+                <span class="journey-year">1995</span>
+                <h3>First Showroom</h3>
+                <p>Our journey began with dedication.</p>
+            </div>
+        </div>
+        <div class="journey-card">
+            <img src="showroom-2.jpg">
+            <div class="journey-info">
+                <span class="journey-year">2008</span>
+                <h3>Expansion Phase</h3>
+                <p>Expanded services with trust.</p>
+            </div>
+        </div>
+        <div class="journey-card">
+            <img src="showroom-3.jpg">
+            <div class="journey-info">
+                <span class="journey-year">Today</span>
+                <h3>Present Showroom</h3>
+                <p>Modern showroom with all tyres.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Brands -->
+<section id="brands" style="background:var(--light);">
+    <div class="section-title">
+        <h2>Brands We Deal With</h2>
+    </div>
+    <div class="brands">
+        <div class="brand"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Balkrishna_Tyres_Logo.svg/2560px-Balkrishna_Tyres_Logo.svg.png"></div>
+        <div class="brand"><img src="https://brandlogos.net/wp-content/uploads/2025/04/mrf_tyres-logo_brandlogos.net_swggy-512x105.png"></div>
+        <div class="brand"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/RGB_LOGO_APOLLO_TYRES_COMPACT_POS_GTD.jpg/960px-RGB_LOGO_APOLLO_TYRES_COMPACT_POS_GTD.jpg"></div>
+        <div class="brand"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/CEAT_Logo.svg/250px-CEAT_Logo.svg.png"></div>
+        <div class="brand"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYx-I3Z3e0ONyHxin5-HY75qxWiwWIB4KvfQ&s"></div>
+        <div class="brand"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/JK-Tyre-logo.png/960px-JK-Tyre-logo.png?20250704170806"></div>
+        <div class="brand"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpQm60Z44icEzNijxtHcecVDoXAINAXig3yg&s"></div>
+        <div class="brand"><img src="https://ralcotyres.com/assets/img/logo.png"></div>
+    </div>
+</section>
+
+<!-- Founder -->
+<section class="founder">
+    <img src="https://via.placeholder.com/200">
+    <h3>Mr. Mohammed Javed</h3>
+    <p>Founder, MJ Tyre Showroom</p>
+</section>
+
+<!-- Location -->
+<section id="contact">
+    <div class="section-title">
+        <h2>Visit Our Showroom</h2>
+    </div>
+    <iframe 
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.03544301201!2d78.44663580000001!3d18.7072313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcdbb4de90e6bb9%3A0x4e678f6eed9965be!2sMJ%20TYRE%20SHOWROOM!5e0!3m2!1sen!2sin!4v1767874760916!5m2!1sen!2sin"
+width="600"
+height="450"
+style="border:0;"
+allowfullscreen=""
+loading="lazy"
+referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+    </iframe>
+</section>
+<footer>
+    <h2>© 2026 MJ Tyre Showroom</h2>
+    <p>Made with ❤️ in Bheemgal</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/916281656958">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
